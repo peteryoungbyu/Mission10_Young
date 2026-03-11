@@ -1,3 +1,5 @@
+// These types are required since Team is inside Bowler. It allows us to also display the team name.
+
 export type Team = {
   teamId: number;
   teamName: string;

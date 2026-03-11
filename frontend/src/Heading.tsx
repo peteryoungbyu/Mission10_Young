@@ -1,3 +1,5 @@
+// Returns the heading describing what the table is.
+
 function Heading() {
   return (
     <>

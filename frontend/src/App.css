@@ -41,6 +41,7 @@
   color: #888;
 }
 
+/* Added styling for the table so that it would be centered */
 table {
   margin: 0 auto;
 }
