@@ -1,3 +1,5 @@
+// Here is the backend for the bowler table app. It connects to the Sqlite database and provides the JSON when the API is called
+
 using Microsoft.EntityFrameworkCore;
 using Mission10_Young.Data;
 

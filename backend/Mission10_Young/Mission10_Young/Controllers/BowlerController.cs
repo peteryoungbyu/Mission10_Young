@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿// Controller for the bowler API
+
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Mission10_Young.Data;
@@ -17,6 +19,7 @@ namespace Mission10_Young.Controllers
 
         }
 
+        // Here is the get request. It uses linq to query the database for only those with the team name of Marlins or Sharks
         [HttpGet(Name = "GetBowlers")]
         public IEnumerable<Bowler> Get()
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Model for the team
+using System;
 using System.Collections.Generic;
 
 namespace Mission10_Young.Data;

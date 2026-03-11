@@ -1,4 +1,5 @@
-﻿{
+﻿// Runs on port 5000 for https and 4000 for http
+{
   "$schema": "https://json.schemastore.org/launchsettings.json",
   "profiles": {
     "backend": {

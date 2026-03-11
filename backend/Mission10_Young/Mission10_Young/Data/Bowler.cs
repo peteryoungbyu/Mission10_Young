@@ -1,4 +1,5 @@
-﻿using System;
+﻿// This is the model for the bowlers table 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -25,7 +26,7 @@ public partial class Bowler
     public string? BowlerPhoneNumber { get; set; }
 
    
-
+    // Establishes FK relationship with Team
     [ForeignKey("Team")]
     public int TeamId { get; set; }
     public Team Team { get; set; }
