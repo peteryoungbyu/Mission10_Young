@@ -147,3 +147,4 @@ C:\Users\peter\OneDrive - Brigham Young University\Desktop\JuniorCore\IS 413\Vis
 C:\Users\peter\OneDrive - Brigham Young University\Desktop\JuniorCore\IS 413\VisualStudioLearning\Mission10_Young\backend\Mission10_Young\Mission10_Young\bin\Debug\net10.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\peter\OneDrive - Brigham Young University\Desktop\JuniorCore\IS 413\VisualStudioLearning\Mission10_Young\backend\Mission10_Young\Mission10_Young\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\peter\OneDrive - Brigham Young University\Desktop\JuniorCore\IS 413\VisualStudioLearning\Mission10_Young\backend\Mission10_Young\Mission10_Young\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\peter\OneDrive - Brigham Young University\Desktop\JuniorCore\IS 413\VisualStudioLearning\Mission10_Young\backend\Mission10_Young\Mission10_Young\obj\Debug\net10.0\Mission10_Young.sourcelink.json

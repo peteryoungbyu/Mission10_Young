@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import BowlerList from './BowlerList';
 
 import './App.css';
 
 function App() {
-  return;
-
-  <></>;
+  return (
+    <>
+      <BowlerList />
+    </>
+  );
 }
 
 export default App;
