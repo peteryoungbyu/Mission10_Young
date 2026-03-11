@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mission10_Young.Data;
 
@@ -23,9 +24,9 @@ public partial class Bowler
 
     public string? BowlerPhoneNumber { get; set; }
 
-    public int? TeamId { get; set; }
+   
 
-    public virtual ICollection<BowlerScore> BowlerScores { get; set; } = new List<BowlerScore>();
-
-    public virtual Team? Team { get; set; }
+    [ForeignKey("Team")]
+    public int TeamId { get; set; }
+    public Team Team { get; set; }
 }

@@ -6,13 +6,52 @@
   },
   "servers": [
     {
-      "url": "https://localhost:7032"
+      "url": "https://localhost:5000"
     },
     {
-      "url": "http://localhost:5005"
+      "url": "http://localhost:4000"
     }
   ],
   "paths": {
+    "/Bowler": {
+      "get": {
+        "tags": [
+          "Bowler"
+        ],
+        "operationId": "GetBowlers",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Bowler"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Bowler"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Bowler"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -55,6 +94,103 @@
   },
   "components": {
     "schemas": {
+      "Bowler": {
+        "type": "object",
+        "properties": {
+          "bowlerId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "bowlerLastName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "bowlerFirstName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "bowlerMiddleInit": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "bowlerAddress": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "bowlerCity": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "bowlerState": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "bowlerZip": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "bowlerPhoneNumber": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "teamId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "team": {
+            "$ref": "#/components/schemas/Team"
+          }
+        }
+      },
+      "Team": {
+        "type": "object",
+        "properties": {
+          "teamId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "teamName": {
+            "type": "string"
+          },
+          "captainId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "null",
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      },
       "WeatherForecast": {
         "type": "object",
         "properties": {
@@ -89,6 +225,9 @@
     }
   },
   "tags": [
+    {
+      "name": "Bowler"
+    },
     {
       "name": "WeatherForecast"
     }

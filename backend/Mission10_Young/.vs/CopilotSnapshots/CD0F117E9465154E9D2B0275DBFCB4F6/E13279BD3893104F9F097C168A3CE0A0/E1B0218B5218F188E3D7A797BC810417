@@ -22,8 +22,8 @@ namespace Mission10_Young.Controllers
         {
             var bowlersList = _bowlingContext.Bowlers
                 .Include(b => b.Team)
-                .Where(b => b.Team.TeamName == "Marlins" || b.Team.TeamName == "Sharks").ToList();
-            
+                .Where(b => new[] { "Marlins", "Sharks" }.Contains(b.Team!.TeamName))
+                .ToList();
 
             return bowlersList;
         }
