@@ -1,12 +1,12 @@
-import type { bowler } from './types/bowler';
+import type { Bowler } from './types/bowler';
 import { useState, useEffect } from 'react';
 
 function BowlerList() {
-  const [bowlers, setBowlers] = useState<bowler[]>([]);
+  const [bowlers, setBowlers] = useState<Bowler[]>([]);
 
   useEffect(() => {
     const fetchBowler = async () => {
-      const response = await fetch('https://localhost:5000/Bowlers');
+      const response = await fetch('https://localhost:5000/Bowler');
       const data = await response.json();
       setBowlers(data);
     };
@@ -16,7 +16,7 @@ function BowlerList() {
 
   return (
     <>
-      <h1>Bowlers</h1>
+      <br />
       <table>
         <thead>
           <tr>
@@ -35,7 +35,7 @@ function BowlerList() {
               <td>
                 {b.bowlerFirstName} {b.bowlerMiddleInit} {b.bowlerLastName}
               </td>
-              <td>{b.teamName}</td>
+              <td>{b.team.teamName}</td>
               <td>{b.bowlerAddress}</td>
               <td>{b.bowlerCity}</td>
               <td>{b.bowlerState}</td>

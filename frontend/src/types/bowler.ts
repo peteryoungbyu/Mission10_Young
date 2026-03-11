@@ -1,12 +1,19 @@
-export type bowler = {
+export type Team = {
+  teamId: number;
+  teamName: string;
+  captainId: number;
+};
+
+export type Bowler = {
   bowlerId: number;
   bowlerLastName: string;
   bowlerFirstName: string;
-  bowlerMiddleInit: string;
+  bowlerMiddleInit: string | null;
   bowlerAddress: string;
   bowlerCity: string;
   bowlerState: string;
   bowlerZip: string;
   bowlerPhoneNumber: string;
-  teamName: string;
+  teamId: number;
+  team: Team;
 };
