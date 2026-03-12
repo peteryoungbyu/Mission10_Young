@@ -1,47 +1,142 @@
-#root {
-  max-width: 1280px;
+.app-shell {
+  max-width: 1160px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 3rem 1.25rem 4rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.page-header {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  animation: fade-in-up 500ms ease-out both;
 }
 
-@keyframes logo-spin {
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #5b6477;
+}
+
+.page-header h1 {
+  margin: 0.45rem 0 0;
+  font-family: 'Montserrat', 'Trebuchet MS', sans-serif;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  line-height: 1.1;
+  color: #102542;
+}
+
+.subtitle {
+  margin-top: 0.9rem;
+  max-width: 68ch;
+  font-size: 1.02rem;
+  color: #35435b;
+}
+
+.content-wrap {
+  margin-top: 1.25rem;
+}
+
+.directory-panel {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #d7deeb;
+  box-shadow: 0 20px 45px rgba(16, 37, 66, 0.14);
+  overflow: hidden;
+  animation: fade-in-up 650ms ease-out both;
+}
+
+.directory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.1rem 1.3rem;
+  border-bottom: 1px solid #e4e9f2;
+  background: linear-gradient(90deg, #f6f9ff 0%, #eef4ff 100%);
+}
+
+.directory-header h2 {
+  margin: 0;
+  font-family: 'Montserrat', 'Trebuchet MS', sans-serif;
+  font-size: 1.2rem;
+  color: #1a355a;
+}
+
+.directory-header p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #586983;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.bowler-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.bowler-table th,
+.bowler-table td {
+  text-align: left;
+  padding: 0.82rem 0.95rem;
+  border-bottom: 1px solid #edf1f7;
+  white-space: nowrap;
+}
+
+.bowler-table thead th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #5b6680;
+  background-color: #f9fbff;
+}
+
+.bowler-table tbody tr:nth-child(even) {
+  background-color: #fcfdff;
+}
+
+.bowler-table tbody tr:hover {
+  background-color: #f2f7ff;
+}
+
+.name-cell {
+  font-weight: 600;
+  color: #1f2f49;
+}
+
+.team-pill {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  background: #dff0ff;
+  color: #12528a;
+}
+
+@keyframes fade-in-up {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(10px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 1.6rem 0.65rem 2.5rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-/* Added styling for the table so that it would be centered */
-table {
-  margin: 0 auto;
+  .directory-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

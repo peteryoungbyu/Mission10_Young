@@ -20,38 +20,46 @@ function BowlerList() {
 
   //   actually returns the table using the data
   return (
-    <>
-      <br />
-      <table>
-        <thead>
-          <tr>
-            <th>Bowler Name</th>
-            <th>Team Name</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Zip</th>
-            <th>Phone Number</th>
-          </tr>
-        </thead>
-        {/* Displays the data taken from the JSON */}
-        <tbody>
-          {bowlers.map((b) => (
-            <tr key={b.bowlerId}>
-              <td>
-                {b.bowlerFirstName} {b.bowlerMiddleInit} {b.bowlerLastName}
-              </td>
-              <td>{b.team.teamName}</td>
-              <td>{b.bowlerAddress}</td>
-              <td>{b.bowlerCity}</td>
-              <td>{b.bowlerState}</td>
-              <td>{b.bowlerZip}</td>
-              <td>{b.bowlerPhoneNumber}</td>
+    <section className="directory-panel">
+      <div className="directory-header">
+        <h2>Active Bowlers</h2>
+        <p>{bowlers.length} roster entries</p>
+      </div>
+
+      <div className="table-scroll">
+        <table className="bowler-table">
+          <thead>
+            <tr>
+              <th>Bowler Name</th>
+              <th>Team</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Zip</th>
+              <th>Phone</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </>
+          </thead>
+          {/* Displays the data taken from the JSON */}
+          <tbody>
+            {bowlers.map((b) => (
+              <tr key={b.bowlerId}>
+                <td className="name-cell">
+                  {b.bowlerFirstName} {b.bowlerMiddleInit} {b.bowlerLastName}
+                </td>
+                <td>
+                  <span className="team-pill">{b.team.teamName}</span>
+                </td>
+                <td>{b.bowlerAddress}</td>
+                <td>{b.bowlerCity}</td>
+                <td>{b.bowlerState}</td>
+                <td>{b.bowlerZip}</td>
+                <td>{b.bowlerPhoneNumber}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
   );
 }
 

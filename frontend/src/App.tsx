@@ -10,10 +10,12 @@ import './App.css';
 
 function App() {
   return (
-    <>
+    <div className="app-shell">
       <Heading />
-      <BowlerList />
-    </>
+      <main className="content-wrap">
+        <BowlerList />
+      </main>
+    </div>
   );
 }
 
